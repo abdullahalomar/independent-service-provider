@@ -7,7 +7,7 @@ const Service = (props) => {
             <div class="card" style={{width: '18rem'}}>
         <img src={picture} class="card-img-top" alt="..."/>
             <div class="card-body">
-              <h5 class={name}>Card title</h5>
+                    <h5 class="card-text">{ name}</h5>
               <h4> Price: ${price}</h4>
               <p class="card-text">{about}</p>
               <button className='btn btn-info'>Proceed Checkout</button>
