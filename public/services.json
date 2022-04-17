@@ -1,44 +1,44 @@
 [
   {
     "_id": "625bd97ca45b96a49b679125",
-    "name": "Richards Woodard",
+    "name": "Muscle Building",
     "price": 85,
-    "about": "Magna mollit occaecat Lorem nisi eu dolor aliquip enim culpa ipsum. In aliquip esse amet cillum occaecat sint magna minim voluptate veniam quis. Sit duis qui ipsum laboris non nisi ea irure enim proident. Cupidatat aliqua adipisicing tempor consequat enim labore dolore aliquip ipsum duis aliqua pariatur dolore irure. In dolor sunt culpa esse laboris id id et excepteur ad nostrud culpa cillum sit.\r\n",
+    "about": "Building muscle is why most of us constantly return to the gym. It's the beacon of light that continues to drive our effort-driven workouts.",
     "picture": "img/esg1.jpg"
   },
   {
     "_id": "625bd97cedad5111b6d18e85",
-    "name": "Garza Oliver",
+    "name": "Fit & Healthy",
     "price": 74,
-    "about": "Culpa ut dolore sit sunt eiusmod dolor eu magna aliqua fugiat aliqua adipisicing consequat. Est quis officia excepteur excepteur fugiat eu Lorem magna. Laborum deserunt est mollit ut elit.\r\n",
+    "about": "Congratulations on taking a forward step to get in shape and feel great. Many people are guilty of wishing.",
     "picture": "img/esg2.jpg"
   },
   {
     "_id": "625bd97c7c60db7e3baf740e",
-    "name": "Cathleen Goodwin",
+    "name": "Weight Loss",
     "price": 78,
-    "about": "Consectetur excepteur ut ad exercitation Lorem irure. Labore in anim elit qui qui sunt minim. Culpa amet officia sit nisi consectetur enim minim. Voluptate anim veniam ea proident cupidatat adipisicing culpa exercitation officia reprehenderit. Lorem sunt consequat Lorem proident occaecat.\r\n",
+    "about": "long-lasting weight loss results and the healthy lifestyle you need to keep them! Here, Many people are guilty of wishing they could get.",
     "picture": "img/esg3.jpg"
   },
   {
     "_id": "625bd97ccb6439f4a76fa064",
-    "name": "Finley Burch",
+    "name": "Fit Body",
     "price": 65,
-    "about": "Veniam ullamco eiusmod do quis anim qui deserunt sint tempor sit occaecat mollit. Adipisicing ut incididunt ut amet esse ipsum dolore aute laboris elit id non esse occaecat. Enim dolor adipisicing sint exercitation elit veniam tempor eu sit sit commodo culpa commodo. Quis in consequat veniam ex officia sint commodo et laborum. Deserunt consectetur enim consequat fugiat labore tempor veniam culpa aliqua labore dolor.\r\n",
+    "about": "The solution is here: fast,  women and men of all fitness levels experience the head-turning body transformations.",
     "picture": "img/img42-2 (1).jpg"
   },
   {
     "_id": "625bd97c2ca2267727f8b1b2",
-    "name": "Gilmore Bridges",
+    "name": "Abs & Biceps",
     "price": 67,
-    "about": "Aliqua ullamco nostrud fugiat tempor cillum nisi eiusmod voluptate nostrud id dolor. Officia eiusmod exercitation do magna excepteur ad magna. Incididunt Lorem occaecat laboris proident consectetur cupidatat fugiat voluptate ut irure.\r\n",
-    "picture": "img/img42-2.jpg"
+    "about": "Your biceps and triceps serve several critical functions, but the one thing they tag-team on is this.",
+    "picture": "img/img53-2.jpg"
   },
   {
     "_id": "625bd97c0371bf3af8a8e581",
-    "name": "Bertie Walsh",
+    "name": "shoulder Press",
     "price": 70,
-    "about": "Veniam cupidatat laborum duis eu commodo fugiat minim Lorem ex labore veniam consequat duis. Ea et anim non amet cupidatat excepteur amet eiusmod esse occaecat ipsum cupidatat veniam anim. Tempor minim cupidatat ullamco velit ullamco proident sit occaecat ut nisi. Do nostrud ea ea do non est. Mollit dolore quis consequat voluptate magna incididunt nostrud. Consequat duis magna tempor eu consectetur consectetur nostrud incididunt veniam in. Esse ea reprehenderit anim incididunt nisi labore.\r\n",
+    "about": "The shoulder press is one of the best exercises for strengthening your shoulders and upper back.",
     "picture": "img/img53-3.jpg"
   }
 ]
