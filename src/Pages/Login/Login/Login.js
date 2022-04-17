@@ -1,17 +1,32 @@
 import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+    
+    if (user) {
+        navigate('/home')
+    }
+    
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        console.log(email, password);
+       signInWithEmailAndPassword(email, password)
     }
     const navigateRegister = event => {
         navigate('/register');
@@ -39,7 +54,7 @@ const Login = () => {
     Submit
   </Button>
             </Form>
-            <p>New to Fitness Heroes?<Link to={'/register'} className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></p>
+            <p className='mt-3'>You have an account?<Link to={'/register'} className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></p>
         </div>
     );
 };
