@@ -5,7 +5,7 @@ const useServices = (count) => {
     useEffect(() => {
         fetch('services.json')
         .then(response => response.json())
-        .then(json => setServices(json.slice(0,count)))
+        .then(json => setServices(json.slice(3,count)))
     }, []);
 
     return [services, setServices];
