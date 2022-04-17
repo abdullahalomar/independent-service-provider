@@ -29,9 +29,9 @@ const Footer = () => {
             </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <h5>Menu</h5>
-                        <Link to={<Home></Home>}>Home</Link>
-                        <Link to={<About></About>}> About</Link>
-                        <Link to={<Blog></Blog>}> Blog</Link>
+                        <Link className='text-decoration-none text-dark' to={<Home></Home>}>Home</Link>
+                        <Link className='text-decoration-none text-dark' to={<About></About>}> About</Link>
+                        <Link className='text-decoration-none text-dark' to={<Blog></Blog>}> Blog</Link>
             </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <img src={location} width={20} alt="" /> Bangladesh
