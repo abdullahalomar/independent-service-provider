@@ -6,7 +6,7 @@
 
 ## Features and Functionality
 
- This website has header, footer and slider.
+### This website has header, footer and slider.
  The services that are on the website are shown on the home page.
  Login route and register route are provided for login and register.
  A protected route has been created so that no user can take any service without login.
