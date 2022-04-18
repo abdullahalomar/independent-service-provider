@@ -6,7 +6,7 @@ const Services = () => {
     const [services, setServices] = useServices(6);
     return (
         <div id='services' className='container mt-3'>
-            <h1 className='text-info text-center'>Services {services.length}</h1>
+            <h1 className='text-center'>Services {services.length}</h1>
             <div className='row'>
             {
                 services.map(service => <Service

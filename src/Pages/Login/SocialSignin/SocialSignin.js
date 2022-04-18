@@ -7,8 +7,8 @@ import github from '../../../images/icons8-github.svg';
 import Loading from '../../Shared/Loading/Loading';
 
 const SocialSignin = () => {
-    const [signInWithGoogle, user, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const [signInWithGithub, user1, githubLoading, githubError] = useSignInWithGithub(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorElement;
 
@@ -23,7 +23,7 @@ const SocialSignin = () => {
         
     }
     
-    if (user || user1) {
+    if (googleUser || githubUser) {
         navigate('/home')
     }
 
