@@ -15,7 +15,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear(); 
     return (
-        <footer className='bg-info py-5 text-dark mt-2'>
+        <footer className='bg-info py-5 text-dark mt-4'>
          <div className='container'>
             <div class="row">
                     <div class="col-sm-12 col-md-4 col-lg-4">
