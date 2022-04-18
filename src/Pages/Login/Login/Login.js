@@ -13,6 +13,7 @@ const Login = () => {
     
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
+    let errorElement;
     const [
         signInWithEmailAndPassword,
         user,
@@ -22,7 +23,13 @@ const Login = () => {
     
     if (user) {
       navigate(from, { replace: true });
-      }
+   }
+  
+  if (error) {
+    errorElement = <div>
+      <h5 className='text-danger'>Error: {error?.message}</h5>
+    </div>
+  }
     
     const handleSubmit = event => {
         event.preventDefault();
@@ -46,16 +53,15 @@ const Login = () => {
   <Form.Group className="mb-3" controlId="formBasicPassword">
     {/* <Form.Label>Password</Form.Label> */}
     <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-          
-          <Button className='w-50 d-block mx-auto' variant="primary" type="submit">
+          </Form.Group>
+
+          {errorElement}
+  
+          <Button className='w-50 d-block mx-auto mb-2' variant="info" type="submit">
     Login
   </Button>
-  
-            </Form>
+        </Form>
+        
         <p className='mt-3'>You have an account?<Link to={'/register'} className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></p>
         <SocialSignin></SocialSignin>
         </div>
