@@ -21,17 +21,23 @@ const Footer = () => {
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <h5>Fitness Heroes</h5>
                         <h6>“Strength does not come from physical capacity. It comes from an indomitable will.”</h6>
-                        <div className=''>
-                        <img src={facebook} width={20} alt="" />
-                        <img src={instagram} width={20} alt="" />
-                        <img src={twitter} width={20} alt="" />
+                        <div className='mt-3 d-flex gap-3'>
+                            <div>
+                            <img src={facebook} width={20} alt="" />
+                        </div>
+                            <div>
+                            <img src={instagram} width={20} alt="" />
+                        </div>
+                            <div>
+                                <img src={twitter} width={20} alt="" />
+                            </div>
                         </div>
             </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <h5>Menu</h5>
-                        <Link className='text-decoration-none text-dark' to={<Home></Home>}>Home</Link>
-                        <Link className='text-decoration-none text-dark' to={<About></About>}> About</Link>
-                        <Link className='text-decoration-none text-dark' to={<Blog></Blog>}> Blog</Link>
+                        <Link className='text-decoration-none text-dark btn btn-outline-secondary' to='/'>Home</Link>
+                        <Link className='text-decoration-none text-dark btn btn-outline-secondary mx-3' to='/about'> About</Link>
+                        <Link className='text-decoration-none text-dark btn btn-outline-secondary' to='/blog'> Blog</Link>
             </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <img src={location} width={20} alt="" /> Bangladesh

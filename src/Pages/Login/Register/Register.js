@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialSignin from '../SocialSignin/SocialSignin';
 
 const Register = () => {
     const [
@@ -31,33 +32,31 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password)
     }
     return (
-        <div className='container w-50 my-5'>
-            <h2 className='text-center text-info'>Please Register</h2>
+        <div className='container w-50 my-4'>
+            <h2 className='text-center text-info mb-4'>Please Register</h2>
             <Form onSubmit={handleRegister}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-    <Form.Label>Your name</Form.Label>
+            <Form.Group className="mb-4" controlId="formBasicName">
+    {/* <Form.Label>Your name</Form.Label> */}
     <Form.Control type="text" name='text' placeholder="Enter your name" required/>
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
+  <Form.Group className="mb-4" controlId="formBasicEmail">
+    {/* <Form.Label>Email address</Form.Label> */}
     <Form.Control type="email" name='email' placeholder="Enter email" required/>
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
+    {/* <Form.Label>Password</Form.Label> */}
     <Form.Control type="password" name='password' placeholder="Password" required/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
-  <Button variant="primary" type="submit">
+  <Button className='w-50 d-block mx-auto' variant="primary" type="submit">
     Register
   </Button>
             </Form>
-            <p className='mt-3'>New to Fitness Heroes?<Link to={'/login'} className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}> Please Login</Link></p>
+        <p className='mt-3'>New to Fitness Heroes?<Link to={'/login'} className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}> Please Login</Link></p>
+        <SocialSignin></SocialSignin>
         </div>
     );
 };
