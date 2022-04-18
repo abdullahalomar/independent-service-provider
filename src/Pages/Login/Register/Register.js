@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import SocialSignin from '../SocialSignin/SocialSignin';
 
 const Register = () => {
+  const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -28,8 +29,11 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-
+      
+       if (agree) {
         createUserWithEmailAndPassword(email, password)
+       }
+        
     }
     return (
         <div className='container w-50 my-4'>
@@ -49,13 +53,13 @@ const Register = () => {
     <Form.Control type="password" name='password' placeholder="Password" required/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+    <Form.Check onClick={()=>setAgree(!agree)} type="checkbox" className={agree ? 'text-primary' : 'text-danger'} label="Accept Fitness Heroes Terms And Conditions" />
   </Form.Group>
-  <Button className='w-50 d-block mx-auto mb-2' variant="info" type="submit">
+  <Button disabled={!agree} className='w-50 d-block mx-auto mb-2' variant="info" type="submit">
     Register
   </Button>
             </Form>
-        <p className='mt-3'>New to Fitness Heroes?<Link to={'/login'} className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}> Please Login</Link></p>
+        <h6 className='mt-3'>New to Fitness Heroes?<Link to={'/login'} className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}> Please Login</Link></h6>
         <SocialSignin></SocialSignin>
         </div>
     );

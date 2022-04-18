@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialSignin from '../SocialSignin/SocialSignin';
+import { async } from '@firebase/util';
 
 
 const Login = () => {
@@ -19,7 +20,10 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+  ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+    auth
+  );
     
     if (user) {
       navigate(from, { replace: true });
@@ -40,7 +44,14 @@ const Login = () => {
     }
     const navigateRegister = event => {
         navigate('/register');
-    }
+  }
+  
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+          alert('Sent email');
+  }
+
     return (
         <div className='container w-50 my-4'>
             <h2 className='text-center text-info mb-4'>Please Login</h2>
@@ -62,7 +73,8 @@ const Login = () => {
   </Button>
         </Form>
         
-        <p className='mt-3'>You have an account?<Link to={'/register'} className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></p>
+        <h6 className='mt-3'>You have an account?<Link to={'/register'} className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></h6>
+        <h6 className='mt-3'>Forget Password?<Link to={'/register'} className='text-primary pe-auto text-decoration-none' onClick={resetPassword}> Reset Password</Link></h6>
         <SocialSignin></SocialSignin>
         </div>
     );
