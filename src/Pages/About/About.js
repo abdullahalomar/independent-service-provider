@@ -17,9 +17,6 @@ const About = () => {
             <div className='border border-primary px-3 py-2 mt-3'>
                     <h5>I have completed Diploma Engineering in Computer Technology. My goal is to be a good quality developer. Not just web development. I would also like to acquire some more programming language skills and do app development work. In particular, I want to work on web development as well as Android app development. Basically my goal is to be a good quality developer.</h5>
                 </div>
-            
-          
-        
         </div>
     );
 };
