@@ -6,14 +6,14 @@ import google from '../../../images/icons8-google.svg';
 import github from '../../../images/icons8-github.svg';
 
 const SocialSignin = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+    const [signInWithGoogle, user, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGithub, user1, githubLoading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorElement;
 
-    if (error || error1) {
+    if (googleError || githubError) {
         errorElement = <div>
-            <h5 className='text-danger'>Error: {error?.message} {error1?.message}</h5>
+            <h5 className='text-danger'>Error: {googleError?.message} {githubError?.message}</h5>
         </div>
         
     }
