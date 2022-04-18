@@ -4,12 +4,17 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/icons8-google.svg';
 import github from '../../../images/icons8-github.svg';
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialSignin = () => {
     const [signInWithGoogle, user, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, githubLoading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorElement;
+
+    if (googleLoading, githubLoading) {
+        return <Loading></Loading>
+    }
 
     if (googleError || githubError) {
         errorElement = <div>
